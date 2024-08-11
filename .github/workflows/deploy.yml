@@ -15,10 +15,13 @@ jobs:
       deployments: write
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3.7.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy --project-name=hextouicolor
+          command: pages deploy ${{ github.workspace }}/ --project-name=hextouicolor
           wranglerVersion: "3.70.0"
