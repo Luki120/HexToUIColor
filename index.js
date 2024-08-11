@@ -1,5 +1,4 @@
 document.querySelector('.input-field').addEventListener('input', () => {
-	const mainContentDiv = document.querySelector('.main-content')
 	const websiteDescription = document.querySelector('.website-description')
 	const websiteExtendedDescription = document.querySelector('.website-extended-description')
 	const languageBlocksContainer = document.querySelector('.language-blocks-container')
@@ -35,9 +34,7 @@ document.querySelector('.input-field').addEventListener('input', () => {
 			websiteDescription.style.color = 'black'
 			websiteExtendedDescription.style.color = 'black'
 		}
-
-		mainContentDiv.classList.add('push-footer-down')
-		languageBlocksContainer.classList.add('fade-in-container');
+		languageBlocksContainer.classList.add('fade-in-container')
 		languageBlocksContainer.classList.remove('fade-out-container')
 	}
 	else {
