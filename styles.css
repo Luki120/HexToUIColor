@@ -1,0 +1,175 @@
+@font-face {
+	font-family: 'Sen';
+	font-weight: normal;
+	src: url('assets/fonts/Sen-Regular.woff');
+}
+@font-face {
+	font-family: 'Sen';
+	font-weight: 500;
+	src: url('assets/fonts/Sen-Medium.woff');
+}
+@font-face {
+	font-family: 'Sen';
+	font-weight: bold;
+	src: url('assets/fonts/Sen-Bold.woff');
+}
+
+:root {
+	--near-background: #F5F7F5;
+}
+
+html, body {
+	font-family: Sen;
+	margin: 0;
+	transition: background-color 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1000px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100dvh;
+	}
+}
+
+h2 {
+	font-weight: 500;
+	text-align: center;
+	transition: color 0.5s ease-in-out;
+}
+
+h3 {
+	font-weight: 500;
+	line-height: 0;
+}
+
+.github-ribbon-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.github-ribbon-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+.github-ribbon {
+	color: white;
+	fill: #4A5899;
+	transition: color 0.5s ease-in-out, fill 0.5s ease-in-out;
+}
+
+.main-content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	min-height: calc(100dvh - 200px);
+}
+
+.website-extended-description {
+	font-weight: normal;
+	max-width: 480px;
+	padding: 0 15px;
+	text-align: center;
+}
+
+.input-container {
+	background-color: var(--near-background);
+	border-radius: 4px;
+	padding: 2px 15px 15px 15px;
+}
+
+.input-field {
+	border: 0;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px #ddd;
+	font-size: 1rem;
+	font-weight: 500;
+	height: 20px;
+	outline: none;
+	padding: 0.4rem;
+	width: 300px;
+}
+
+.language-blocks-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	opacity: 0;
+	padding: 30px;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+	visibility: hidden;
+}
+
+.language-blocks-container > div {
+	background-color: var(--near-background);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5rem;
+	font-weight: bold;
+	max-width: 550px;
+	padding: 1rem;
+	text-align: left;
+}
+
+.title-container {
+	align-items: center;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.title-container p {
+	margin: 0;
+}
+
+.copy-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	height: 48px;
+	width: 48px;
+}
+
+.language-blocks-container h4 {
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin: 0;
+}
+
+.footer {
+	align-items: center;
+	background-color: var(--near-background);
+	color: gray;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	font-size: 0.8rem;
+	gap: 0.5rem;
+	height: 120px;
+	justify-content: center;
+	width: 100dvw;
+}
+
+.github-link {
+	color: inherit;
+	padding-top: 5px;
+	text-decoration: none;
+}
+
+.fade-in-container {
+	opacity: 1;
+	visibility: visible;
+}
+
+.fade-out-container {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.push-footer-down {
+	min-height: 100dvh;
+}
