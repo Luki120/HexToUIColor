@@ -42,7 +42,12 @@ document.querySelector('.input-field').addEventListener('input', () => {
 		languageBlocksContainer.classList.add('fade-out-container')
 		languageBlocksContainer.classList.remove('fade-in-container')
 	}
-});
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+	const currentYear = new Date().getFullYear()
+	document.querySelector('.copyright-year').textContent = `© ${currentYear} Luki120`
+})
 
 /**
  * Converts a hex color code to various color formats.
@@ -53,7 +58,7 @@ document.querySelector('.input-field').addEventListener('input', () => {
  * @property {string} uiColorObjC - Objective-C color format string.
  */
 function hexToColorFormats(hex) {
-	hex = hex.replace(/^#/, '');
+	hex = hex.replace(/^#/, '')
 
 	const rHex = hex.slice(0, 2)
 	const gHex = hex.slice(2, 4)
@@ -61,8 +66,8 @@ function hexToColorFormats(hex) {
 	const aHex = hex.length === 8 ? hex.slice(6, 8) : 'FF'
 
 	const [r, g, b, a] = [rHex, gHex, bHex, aHex].map((value, i) => {
-		const decimal = parseInt(value, 16);
-		const normalized = (decimal / 255).toFixed(2);
+		const decimal = parseInt(value, 16)
+		const normalized = (decimal / 255).toFixed(2)
 		return normalized === '1.00' ? '1.0' : normalized
 	});
 
@@ -74,7 +79,7 @@ function hexToColorFormats(hex) {
 		colorSwiftUI,
 		uiColorSwift,
 		uiColorObjC
-	};
+	}
 }
 
 async function copyText(paragraphId) {

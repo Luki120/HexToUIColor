@@ -16,6 +16,7 @@
 
 :root {
 	--near-background: #F5F7F5;
+	--soft-blue: #4A5899;
 }
 
 html, body {
@@ -49,7 +50,7 @@ h3 {
 
 .github-ribbon {
 	color: white;
-	fill: #4A5899;
+	fill: var(--soft-blue);
 	transition: color 0.5s ease-in-out, fill 0.5s ease-in-out;
 }
 
@@ -159,4 +160,28 @@ h3 {
 .fade-out-container {
 	opacity: 0;
 	visibility: hidden;
+}
+
+.open-source-text {
+	color: var(--soft-blue);
+	position: relative;
+	text-decoration: inherit;
+}
+
+@media (min-width: 768px) {
+	.open-source-text::after {
+		background-color: var(--soft-blue);
+		bottom: -2px;
+		left: 0;
+		content: '';
+		height: 1.5px;
+		position: absolute;
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
+		width: 100%;
+	}
+
+	.open-source-text:hover::after {
+		transform: scaleX(1);
+	}
 }
