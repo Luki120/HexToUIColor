@@ -1,0 +1,130 @@
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+h2 {
+	font-weight: 500;
+	text-align: center;
+	transition: color 0.5s ease-in-out;
+}
+
+h3 {
+	font-weight: 500;
+	line-height: 0;
+	position: relative;
+}
+
+h3::after, h3::before {
+	position: absolute;
+	transition: opacity 0.35s linear;
+}
+
+h3::after {
+	content: "UIColor";
+	opacity: 0;
+}
+
+h3::before {
+	content: "HEX";
+	opacity: 1;
+}
+
+h3.content-transition::after {
+	opacity: 1;
+}
+
+h3.content-transition::before {
+	opacity: 0;
+}
+
+.dark-colors {
+	color: white;
+}
+
+.github-ribbon-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.github-ribbon-button {
+	padding: 0;
+}
+
+.github-ribbon {
+	color: white;
+	fill: var(--soft-blue);
+	transition: color 0.5s ease-in-out, fill 0.5s ease-in-out;
+}
+
+.main-content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	min-height: 100dvh;
+}
+
+.website-extended-description {
+	font-weight: normal;
+	max-width: 480px;
+	padding: 0 15px;
+	text-align: center;
+	transition: color 0.5s ease-in-out;
+}
+
+.hex-uicolor-container {
+	align-items: center;
+	display: flex;
+	font-size: 1.5rem;
+	font-weight: 500;
+	gap: 0.8rem;
+	justify-content: center;
+	transition: color 0.5s ease-in-out;
+}
+
+.switch-mode-button {
+	background-color: var(--near-background);
+	border-radius: 10px;
+	padding: 10px 15px;
+}
+
+.arrow {
+	display: inline-block;
+	font-size: 1.5rem;
+	transition: transform 0.35s ease-in-out;
+}
+
+.arrow-rotation {
+	transform: rotate(180deg);
+}
+
+.input-container {
+	background-color: var(--near-background);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.5rem;
+	padding: 2px 15px 15px;
+}
+
+.input-field {
+	border: 0;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px #ddd;
+	font-size: 0.95rem;
+	font-weight: 500;
+	height: 20px;
+	outline: none;
+	padding: 0.4rem;
+	width: 320px;
+}
+
+.input-field::placeholder {
+	transition: opacity 0.35s linear;
+}
+
+.input-field.content-transition::placeholder {
+	opacity: 0;
+}

@@ -6,7 +6,7 @@
 	<meta content="UIColor" property="og:title"/>
 	<meta content="UIColor.io clone" property="og:description"/>
 	<link rel="icon" href="assets/images/favicon.png">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="/dist/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 	<title>UIColor</title>
 </head>
@@ -25,18 +25,34 @@
 		<div>
 			<h2 class="website-description">Convert HEX colors to Color & UIColor</h2>
 			<h4 class="website-extended-description">
-				This is a clone of the original UIColor.io website, made with vanilla JS. It lets you convert hex colors to Color for SwiftUI & UIColor for UIKit.
+				This is a clone of the original UIColor.io website, made with vanilla JS. It lets you convert hex colors to Color for SwiftUI & UIColor for UIKit & the other way round.
 			</h4>
 		</div>
+		<div class="hex-uicolor-container">
+			HEX
+			<button aria-label="Switch color conversion button" class="switch-mode-button">
+				<span class="arrow">→</span>
+			</button>
+			UIColor
+		</div>
 		<div class="input-container">
-			<h3>HEX</h3>
+			<h3></h3>
 			<input class="input-field" type="text" placeholder="e.g. #B38FFF">
+		</div>
+		<div class="hex-container">
+			<div class="title-container">
+				<p>Hex color</p>
+				<button aria-label="Copy color button" class="copy-button" onclick="copyColor('hex-content')">
+					<i class="fa fa-copy" style="font-size: 1rem;"></i>
+				</button>
+			</div>
+			<h4 id="hex-content"></h4>
 		</div>
 		<div class="language-blocks-container">
 			<div class="objc-container">
 				<div class="title-container">
 					<p>Objective-C</p>
-					<button aria-label="Copy color button" class="copy-button" onclick="copyText('objc-content')">
+					<button aria-label="Copy color button" class="copy-button" onclick="copyColor('objc-content')">
 						<i class="fa fa-copy" style="font-size: 1rem;"></i>
 					</button>
 				</div>
@@ -45,7 +61,7 @@
 			<div class="swift-container">
 				<div class="title-container">
 					<p>Swift</p>
-					<button aria-label="Copy color button" class="copy-button" onclick="copyText('swift-content')">
+					<button aria-label="Copy color button" class="copy-button" onclick="copyColor('swift-content')">
 						<i class="fa fa-copy" style="font-size: 1rem;"></i>
 					</button>
 				</div>
@@ -54,7 +70,7 @@
 			<div class="swiftui-container">
 				<div class="title-container">
 					<p>SwiftUI</p>
-					<button aria-label="Copy color button" class="copy-button" onclick="copyText('swiftui-content')">
+					<button aria-label="Copy color button" class="copy-button" onclick="copyColor('swiftui-content')">
 						<i class="fa fa-copy" style="font-size: 1rem;"></i>
 					</button>
 				</div>
