@@ -1,3 +1,5 @@
+@use "../utils/functions" as utils;
+
 button {
 	background-color: transparent;
 	border: none;
@@ -69,7 +71,7 @@ h3.content-transition::before {
 .website-extended-description {
 	font-weight: normal;
 	max-width: 480px;
-	padding: 0 15px;
+	padding: 0 utils.rem(15);
 	text-align: center;
 	transition: color 0.5s ease-in-out;
 }
@@ -87,7 +89,7 @@ h3.content-transition::before {
 .switch-mode-button {
 	background-color: var(--near-background);
 	border-radius: 10px;
-	padding: 10px 15px;
+	padding: utils.rem(10) utils.rem(15);
 }
 
 .arrow {
@@ -106,7 +108,7 @@ h3.content-transition::before {
 	display: flex;
 	flex-direction: column;
 	margin-top: 1.5rem;
-	padding: 2px 15px 15px;
+	padding: utils.rem(2) utils.rem(15) utils.rem(15);
 }
 
 .input-field {
