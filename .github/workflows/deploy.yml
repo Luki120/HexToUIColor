@@ -27,4 +27,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          preCommands: npm install sass && npx sass scss/:dist/ --style compressed
           command: pages deploy ${{ github.workspace }}/ --project-name=hextouicolor
