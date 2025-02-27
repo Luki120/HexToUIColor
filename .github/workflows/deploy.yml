@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - scss/**
+      - index.html
+      - index.js
 
   workflow_dispatch:
 
