@@ -16,29 +16,30 @@ h3 {
 	font-weight: 500;
 	line-height: 0;
 	position: relative;
-}
 
-h3::after, h3::before {
-	position: absolute;
-	transition: opacity 0.35s linear;
-}
+	&::after, &::before {
+		position: absolute;
+		transition: opacity 0.35s linear;
+	}
 
-h3::after {
-	content: "UIColor";
-	opacity: 0;
-}
+	&::after {
+		content: "UIColor";
+		opacity: 0;
+	}
 
-h3::before {
-	content: "HEX";
-	opacity: 1;
-}
+	&::before {
+		content: "HEX";
+		opacity: 1;
+	}
 
-h3.content-transition::after {
-	opacity: 1;
-}
-
-h3.content-transition::before {
-	opacity: 0;
+	&.content-transition {
+		&::after {
+			opacity: 1;
+		}
+		&::before {
+			opacity: 0;
+		}
+	}
 }
 
 .dark-colors {
@@ -123,10 +124,43 @@ h3.content-transition::before {
 	width: 320px;
 }
 
-.input-field::placeholder {
-	transition: opacity 0.35s linear;
+.input-field {
+	&::placeholder {
+		transition: opacity 0.35s linear;
+	}
+
+	&.content-transition {
+		&::placeholder {
+			opacity: 0;
+		}
+	}
 }
 
-.input-field.content-transition::placeholder {
+.toast-container {
+	bottom: utils.rem(30);
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	padding: utils.rem(20);
+	position: fixed;
+}
+
+.copied-code-toast {
+	background-color: white;
+	border-radius: 100px;
+	border: 1px solid #E0E0E0;
+	box-shadow: 0 8px 20px #0000001A;
+	color: #333333;
+	min-width: 140px;
 	opacity: 0;
+	padding: 1rem utils.rem(24);
+	text-align: center;
+	transform: translateY(utils.rem(100));
+	transition: opacity 0.35s, transform 0.4s;
+
+	&.fade-in {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

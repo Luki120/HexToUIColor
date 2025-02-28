@@ -187,7 +187,13 @@ function hexToColorFormats(hex) {
 async function copyColor(paragraphId) {
 	try {
 		await navigator.clipboard.writeText(document.getElementById(paragraphId).textContent)
-		alert('Color copied to clipboard!')
+
+		const copiedCodeToast = document.querySelector('.copied-code-toast')
+		copiedCodeToast.classList.add('fade-in')
+
+		setTimeout(() => {
+			copiedCodeToast.classList.remove('fade-in')
+		}, 2500)
 	}
 	catch {
 		console.error('Failed to copy color: ', error)
