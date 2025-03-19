@@ -138,11 +138,10 @@ h3 {
 
 .toast-container {
 	bottom: utils.rem(30);
-	left: 0;
-	right: 0;
 	display: flex;
 	justify-content: center;
 	padding: utils.rem(20);
+	pointer-events: none;
 	position: fixed;
 }
 
