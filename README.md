@@ -1,6 +1,6 @@
 # HexToUIColor
 
-* This is a clone of the original [UIColor.io](https://uicolor.io/) website, made with vanilla JS. It lets you convert hex colors to Color for SwiftUI & UIColor for UIKit.
+* This is a clone of the original [UIColor.io](https://uicolor.io/) website, made with vanilla JS. It lets you convert hex colors to Color for SwiftUI & UIColor for UIKit & the other way round.
 
 ## Socials
 
